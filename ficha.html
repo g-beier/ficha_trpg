@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tormenta RPG - Ficha Editável</title>
+		<meta charset="utf-8">
+		<meta name="author" author="Gustav Beier">
+		<meta name="description" description="Ficha editável para acesso web de Tormenta RPG.">
+		<link rel="stylesheet" href="ficha_style.css">
+		<script src="ficha_script.js"></script>
+	</head>
+	<!--
+		PROJETO:
+		
+		
+		
+		
+		
+	-->
+	<body>
+		<header>
+			<h1>Ficha de Tormenta RPG</h1>
+		</header>
+		
+		<div class="leftCol">
+			<section class="charSection" id="char"> <!-- CABEÇALHO:
+				Nome do Personagem, Idade, Divindade, Tendência
+				Classe, Nível
+			Raça, Tamanho -->
+			<label for="charName">Nome do Personagem:</label><input id="charName">
+			<label for="charRace">Raça:</label><input id="charRace">
+			<label for="charSize">Tamanho</label><select id="charSize">
+				<option value="8" selected>Diminuto</option>
+				<option value="4" selected>Ínfimo</option>
+				<option value="2" selected>Mínimo</option>
+				<option value="1" selected>Pequeno</option>
+				<option value="0" selected>Médio</option>
+				<option value="-1" selected>Grande</option>
+				<option value="-2" selected>Enorme</option>
+				<option value="-4" selected>Descomunal</option>
+				<option value="-8" selected>Colossal</option>
+			</select>
+						<label for="charDesloc">Deslocamento:</label><input id="charDesloc">
+			<label for="charPlayer">Nome do Jogador:</label><input id="charPlayer">
+			<label for="charAlignment">Tendência:</label><select id="charAlignment">
+				<option value="LB">LB - Leal e Bondoso</option>
+				<option value="LN">LN - Leal e  Neutro</option>
+				<option value="LM">LM - Leal e Maligno</option>
+				<option value="NB">NB - Neutro e Bondoso</option>
+				<option value="N" selected>N - Neutro</option>
+				<option value="NM">NM - Neutro e Maligno</option>
+				<option value="CB">CB - Caótico e Bondoso</option>
+				<option value="CN">CN - Caótico e Neutro</option>
+				<option value="CM">CM - Caótico e Maligno</option>
+			</select>
+			<label for="charDeity">Divindade:</label><input id="charDeity">
+			<label for="charAge">Idade:</label><input type="number" id="charAge" min="0" max="999">
+			<label for="charClass">Classe:</label><input id="charClass">
+			<label for="charLevel">Nível:</label><input type="number" step="1" id="charLevel" value="1">
+			</section>
+			
+			<section class="habSection" id="hab"> <!-- HABILIDADES BÁSICAS -->
+				<div class="hab">
+					<div class="habTitle">
+						<span class="habAbbr">For</span> <br />
+						<span class="habName">Força</span>
+					</div>
+					<label for="FOR">Valor</label><input type="number" step="1" min="0" id="FOR" class="habValor" value="10">
+					<label for="FORtemp">Temp</label><input type="number" step="1" id="FORtemp" class="habTemp" placeholder="0">
+					<label for="FORmod">Mod</label><input id="FORmod" class="habMod d20" value="0" readonly>
+				</div>
+				<div class="hab">
+					<div class="habTitle">
+						<span class="habAbbr">Des</span> <br />
+						<span class="habName">Destreza</span>
+					</div>
+					<label for="DES">Valor</label><input type="number" step="1" min="0" id="DES" class="habValor"value="10">
+					<label for="DEStemp">Temp</label><input type="number" step="1" id="DEStemp" class="habTemp" placeholder="0">
+					<label for="DESmod">Mod</label><input id="DESmod" class="habMod d20" value="0" readonly>
+				</div>
+				<div class="hab">
+					<div class="habTitle">
+						<span class="habAbbr">Con</span> <br />
+						<span class="habName">Constituição</span>
+					</div>
+				<label for="CON">Valor</label><input type="number" step="1" min="0" id="CON" class="habValor"value="10">
+				<label for="CONtemp">Temp</label><input type="number" step="1" id="CONtemp" class="habTemp" placeholder="0">
+				<label for="CONmod">Mod</label><input id="CONmod" class="habMod d20" value="0" readonly>
+				</div>
+				<div class="hab">
+					<div class="habTitle">
+						<span class="habAbbr">Int</span> <br />
+						<span class="habName">Inteligência</span>
+					</div>
+					<label for="INT">Valor</label><input type="number" step="1" min="0" id="INT" class="habValor"value="10">
+					<label for="INTtemp">Temp</label><input type="number" step="1" id="INTtemp" class="habTemp" placeholder="0">
+					<label for="INTmod">Mod</label><input id="INTmod" class="habMod d20" value="0" readonly>
+				</div>
+				<div class="hab">
+					<div class="habTitle">
+						<span class="habAbbr">Sab</span> <br />
+						<span class="habName">Sabedoria</span>
+					</div>
+					<label for="SAB">Valor</label><input type="number" step="1" min="0" id="SAB" class="habValor"value="10">
+					<label for="SABtemp">Temp</label><input type="number" step="1" id="SABtemp" class="habTemp" placeholder="0">
+					<label for="SABmod">Mod</label><input id="SABmod" class="habMod d20" value="0" readonly>
+				</div>
+				<div class="hab">
+					<div class="habTitle">
+						<span class="habAbbr">Car</span> <br />
+						<span class="habName">Carisma</span>
+					</div>
+					<label for="CAR">Valor</label><input type="number" step="1" min="0" id="CAR" class="habValor" value="10">
+					<label for="CARtemp">Temp</label><input type="number" step="1" id="CARtemp" class="habTemp" placeholder="0">
+					<label for="CARmod">Mod</label><input id="CARmod" class="habMod d20" value="0" readonly>
+				</div>
+			</section>
+			
+			<section class="statsSection" id="stats"> <!-- DADOS DO PERSONAGEM:
+				CA, PV, BA
+			PM, PE, Resistências-->
+			Dados do Personagem, como Classe de Armadura, Pontos de Vida, Pontos de Magia e Pontos de Energia, Resistências, Bônus de Ataque.
+			</section>
+			
+			<section class="atkSection" id="atk"> <!-- ATAQUES -->
+				<h2>Ataques</h2>
+				Tabela contendo as armas e ataques do personagem.
+			</section>
+			
+			<section class="armorSection" id="armor"> <!-- EQUIPAMENTOS -->
+				<h2>Equipamentos</h2>
+				Tabela contendo os equipamentos do personagem, como armadura e escudo.
+			</section>
+			
+			<section class="skillSection" id="skill"> <!-- TALENTOS E HABILIDADES -->
+				<h2>Talentos</h2>
+				<h2>Habilidades de Classe</h2>
+				<h2>Habilidades de Raça</h2>
+				TextArea para Talentos, Habilidades de Raça e Habilidades de Classe.
+			</section>
+		</div>
+		
+		<div class="rightCol">
+			<section class="perSection" id="per"> <!-- PERÍCIAS -->
+				<h2>Perícias</h2>
+				<table class="perTable" id="pericias">
+					<tr>
+						<td class="perTableHeader" colspan="2"></td>
+						<td class="perTableHeader">Total</td>
+						<td class="perTableHeader">Hab</td>
+						<td class="perTableHeader">Bônus</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="perAcroTreino"></td>
+						<td class="perTableName"><span class="per" id="perAcro">Acrobacia</span></td>
+						<td><input type="number" id="perAcroTotal" class="d20" value="0" readonly></td>
+						<td><select id="perAcroHab">
+							<option value="FORmod">FOR</option>
+							<option value="DESmod" selected>DES</option>
+							<option value="CONmod">CON</option>
+							<option value="INTmod">INT</option>
+							<option value="SABmod">SAB</option>
+							<option value="CARmod">CAR</option>
+						</select></td>
+						<td><input type="number" id="perAcroBonus"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="perAdesTreino"></td>
+						<td class="perTableName"><span class="per" id="perAdes">Adestrar Animais</span></td>
+						<td><input type="number" id="perAdesTotal" class="d20" value="0" readonly></td>
+						<td><select id="perAdesHab">
+							<option value="FORmod">FOR</option>
+							<option value="DESmod">DES</option>
+							<option value="CONmod">CON</option>
+							<option value="INTmod">INT</option>
+							<option value="SABmod">SAB</option>
+							<option value="CARmod" selected>CAR</option>
+						</select></td>
+						<td><input type="number" id="perAdesBonus"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="perAtleTreino"></td>
+						<td class="perTableName"><span class="per" id="perAtle">Atletismo</span></td>
+						<td><input type="number" id="perAtleTotal" class="d20" value="0" readonly></td>
+						<td><select id="perAtleHab">
+							<option value="FORmod" selected>FOR</option>
+							<option value="DESmod">DES</option>
+							<option value="CONmod">CON</option>
+							<option value="INTmod">INT</option>
+							<option value="SABmod">SAB</option>
+							<option value="CARmod">CAR</option>
+						</select></td>
+						<td><input type="number" id="perAtleBonus"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="perAtu1Treino"></td>
+						<td class="perTableName"><span class="per" id="perAtu1">Atuação (<input id="perAtu1Spec" class="perSpec">)</span></td>
+						<td><input type="number" id="perAtu1Total" class="d20" value="0" readonly></td>
+						<td><select id="perAtu1Hab">
+							<option value="FORmod">FOR</option>
+							<option value="DESmod">DES</option>
+							<option value="CONmod">CON</option>
+							<option value="INTmod">INT</option>
+							<option value="SABmod">SAB</option>
+							<option value="CARmod" selected>CAR</option>
+						</select></td>
+						<td><input type="number" id="perAtu1Bonus"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="perAtu2Treino"></td>
+						<td class="perTableName"><span class="per" id="perAtu2">Atuação (<input id="perAtu2Spec" class="perSpec">)</span></td>
+						<td><input type="number" id="perAtu2Total" class="d20" value="0" readonly></td>
+						<td><select id="perAtu2Hab">
+							<option value="FORmod">FOR</option>
+							<option value="DESmod">DES</option>
+							<option value="CONmod">CON</option>
+							<option value="INTmod">INT</option>
+							<option value="SABmod">SAB</option>
+							<option value="CARmod" selected>CAR</option>
+						</select></td>
+						<td><input type="number" id="perAtu2Bonus"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="perAtu3Treino"></td>
+						<td class="perTableName"><span class="per" id="perAtu3">Atuação (<input id="perAtu2Spec" class="perSpec">)</span></td>
+						<td><input type="number" id="perAtu3Total" class="d20" value="0" readonly></td>
+						<td><select id="perAtu3Hab">
+							<option value="FORmod">FOR</option>
+							<option value="DESmod">DES</option>
+							<option value="CONmod">CON</option>
+							<option value="INTmod">INT</option>
+							<option value="SABmod">SAB</option>
+							<option value="CARmod" selected>CAR</option>
+						</select></td>
+						<td><input type="number" id="perAtu3Bonus"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="perCavaTreino"></td>
+						<td class="perTableName"><span class="per" id="perCava">Cavalgar</span></td>
+						<td><input type="number" id="perCavaTotal" class="d20" value="0" readonly></td>
+						<td><select id="perCavaHab">
+							<option value="FORmod">FOR</option>
+							<option value="DESmod" selected>DES</option>
+							<option value="CONmod">CON</option>
+							<option value="INTmod">INT</option>
+							<option value="SABmod">SAB</option>
+							<option value="CARmod">CAR</option>
+						</select></td>
+						<td><input type="number" id="perCavaBonus"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="perCon1Treino"></td>
+						<td class="perTableName"><span class="per" id="perCon1">Conhecimento (<input id="perCon1Spec" class="perSpec">)</span></td>
+						<td><input type="number" id="perCon1Total" class="d20" value="0" readonly></td>
+						<td><select id="perCon1Hab">
+							<option value="FORmod">FOR</option>
+							<option value="DESmod">DES</option>
+							<option value="CONmod">CON</option>
+							<option value="INTmod" selected>INT</option>
+							<option value="SABmod">SAB</option>
+							<option value="CARmod">CAR</option>
+						</select></td>
+						<td><input type="number" id="perCon1Bonus"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="perCon2Treino"></td>
+						<td class="perTableName"><span class="per" id="perCon2">Conhecimento (<input id="perCon2Spec" class="perSpec">)</span></td>
+						<td><input type="number" id="perCon2Total" class="d20" value="0" readonly></td>
+						<td><select id="perCon2Hab">
+							<option value="FORmod">FOR</option>
+							<option value="DESmod">DES</option>
+							<option value="CONmod">CON</option>
+							<option value="INTmod" selected>INT</option>
+							<option value="SABmod">SAB</option>
+							<option value="CARmod">CAR</option>
+						</select></td>
+						<td><input type="number" id="perCon2Bonus"></td>
+					</tr>
+				</table>
+			</section>
+			
+			<section class="magiaSection" id="magia"> <!-- LISTA DE MAGIAS -->
+				<h2>Magias</h2>
+				<label for="magiaNivel0">Truques e Preces:</label><br /><textarea class="magiaLista" cols="30" rows="4" id="magiaNivel0"></textarea><br />
+				
+				<label for="magiaNivel1">Magias de 1º Nível:</label><br /><textarea class="magiaLista" cols="30" rows="4" id="magiaNivel1"></textarea><br />
+				
+				<label for="magiaNivel2">Magias de 2º Nível:</label><br /><textarea class="magiaLista" cols="30" rows="4" id="magiaNivel2"></textarea><br />
+				
+				<label for="magiaNivel3">Magias de 3º Nível:</label><br /><textarea class="magiaLista" cols="30" rows="4" id="magiaNivel3"></textarea><br />
+				
+				<label for="magiaNivel4">Magias de 4º Nível:</label><br /><textarea class="magiaLista" cols="30" rows="4" id="magiaNivel4"></textarea><br />
+				
+				<label for="magiaNivel5">Magias de 5º Nível:</label><br /><textarea class="magiaLista" cols="30" rows="4" id="magiaNivel5"></textarea><br />
+				
+				<label for="magiaNivel6">Magias de 6º Nível:</label><br /><textarea class="magiaLista" cols="30" rows="4" id="magiaNivel6"></textarea><br />
+				
+				<label for="magiaNivel7">Magias de 7º Nível:</label><br /><textarea class="magiaLista" cols="30" rows="4" id="magiaNivel7"></textarea><br />
+				
+				<label for="magiaNivel8">Magias de 8º Nível:</label><br /><textarea class="magiaLista" cols="30" rows="4" id="magiaNivel8"></textarea><br />
+				
+				<label for="magiaNivel9">Magias de 9º Nível:</label><br /><textarea class="magiaLista" cols="30" rows="4" id="magiaNivel9"></textarea>
+			</section>
+		</div>
+		
+		<section class="calcSection" id="calc"> <!-- SEÇÃO DE CÁLCULOS -->
+			Cálculos de PV e PM, para atualizar os totais apresentados na seção de Dados do Personagem.
+		</section>
+		
+		<!--<footer>
+			Ficha desenvolvida por Gustav Beier.
+		</footer> -->
+	</body>
+</html>

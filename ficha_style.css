@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: "Calibri", sans-serif;
+	background-color: #999999;
+	margin: 0;
+}
+
+input {
+	border: none;
+	border-bottom: 2px black solid;
+}
+
+input[type="number"] {
+	width: 50px;
+}
+
+input[readonly] {
+	text-align: center;
+	font-size: 14pt;
+}
+
+header {
+	widht: 100%;
+	padding: 0;
+	background-color: #992222;
+}
+
+h1 {
+	margin: 0px 15px;
+	color: white;
+}
+
+h2 {
+	width: 100%;
+	color: white;
+	background-color: black;
+	text-align: center;
+	padding: 5px;
+	margin: 0;
+}
+
+section {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.leftCol {
+	width: 70%;
+	float: left;
+	padding: 10px;
+	min-width: 800px;
+}
+
+.rightCol {
+	width: 30%;
+	float: left;
+	padding: 10px;
+	min-width: 300px;
+}
+
+.calcSection {
+	float: left;
+	width: 100%;
+}
+
+.perTable {
+	width: 100%;
+	padding: 0;
+	text-align: center;
+	border: 0;
+	border-collapse: collapse;
+}
+
+.perTableHeader {
+	background-color: #000000;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.perTableName {
+	text-align: left;
+}
+
+.hab {
+	width: calc(100%/6);
+	float: left;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	min-width: 100px;
+}
+
+.habAbbr {
+	text-transform: uppercase;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.habName {
+	font-size: 9pt;
+}
+
+.habTitle {
+	background-color: #000000;
+	color: #FFFFFF ;
+}
+
+.habValor {
+	width: 30px;
+}
+
+.habTemp {
+	width: 30px;
+}
+
+.habMod {
+	height: 30px;
+	width: 30px;
+}
+
+.perSpec {
+	width: 60px;
+}
+
+.magiaSection {
+	text-align: center;
+}
+
+.magiaLista{
+	resize: vertical;
+	width: 100%;
+	max-width: 300px;
+}
