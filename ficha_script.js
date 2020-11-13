@@ -3,20 +3,20 @@
 function d20(element) {
 	var dice = Math.ceil( 20 * Math.random() ) ;
 	return dice + parseInt(element.value) ;
-};
+}
 
 /* ---------------- HABILIDADES BÁSICAS ---------------- */
 
 function modificador(atributo) {
     return Math.floor(atributo / 2) - 5;
-};
+}
 
 function atualizarModificador(nomeAtributo) {
 	var attr     = parseInt(document.getElementById(nomeAtributo         ).value);
 	var attrTemp = parseInt(document.getElementById(nomeAtributo + 'temp').value) || 0;
 	
 	document.getElementById(nomeAtributo + 'mod').value = modificador(attr+attrTemp);
-};
+}
 
 /* ---------------- PERÍCIAS ---------------- */
 
@@ -29,13 +29,13 @@ function grad(per) {
 		var gd = Math.floor(nv / 2);
 	}
 	return gd;
-};
+}
 
 function atualizarPericia(perId) {
 	var bonus = parseInt(document.getElementById(perId + 'Bonus').value) || 0 ;
 	var hab = parseInt(document.getElementById(document.getElementById(perId + 'Hab').value).value) || 0;
 	document.getElementById(perId + 'Total').value = hab + bonus + grad(perId) ;
-};
+}
 
 document.addEventListener("DOMContentLoaded", function(event) {
 	/* ---------------- HABILIDADES BÁSICAS ---------------- */
@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			});
 		});
 	});
+	
 	/* ---------------- DADOS ---------------- */
 	document.querySelectorAll('.d20').forEach(function(element) {
 		element.addEventListener('click', function(spot) {
