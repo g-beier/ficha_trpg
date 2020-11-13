@@ -9,27 +9,25 @@ body {
 	font-family: 'Encode Sans', Calibri, sans-serif;
 	background-color: #999999;
 	margin: 0;
-	font-size: 1em;
 }
 
 input {
 	border: none;
 	border-bottom: 2px black solid;
+	height: 1.5em;
 }
 
 input[type="number"] {
-	width: 2em;
+	width: 3em;
 	text-align: center;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
 }
 
 input[readonly] {
-	font-size: 1.3em;
 	text-align: center;
 }
 
@@ -39,19 +37,18 @@ textarea {
 }
 
 header {
-	widht: 100%;
+	width: 100%;
 	padding: 0;
 	background-color: #992222;
 }
 
 h1 {
-	margin: 0px 15px;
+	margin: 0px 5px;
 	color: white;
 }
 
 h2 {
 	width: 100%;
-	font-size: 1.3em;
 	text-transform: uppercase;
 	color: white;
 	background-color: black;
@@ -93,15 +90,18 @@ footer {
 	padding-left: 10px;
 	padding-right: 10px;
 	min-width: 100px;
+	display: block;
 }
 
-.habAbbr {
+.habAbbr,
+.statsAbbr {
 	text-transform: uppercase;
 	font-size: 1.3em;
 	font-weight: bold;
 }
 
-.habName {
+.habName,
+.statsSav {
 	font-size: 0.8em;
 	font-weight: normal;
 }
@@ -111,21 +111,8 @@ footer {
 	color: #FFFFFF ;
 }
 
-.habValor {
-	width: 30px;
-}
-
-.habTemp {
-	width: 30px;
-}
-
-.habMod {
-	height: 30px;
-	width: 30px;
-}
-
 .statsTable {
-	width: 40%;
+	width: 20%;
 	padding: 0;
 	text-align: center;
 	border: 0;
@@ -138,7 +125,6 @@ footer {
 	font-weight: bold;
 }
 
-
 .atkTable {
 	width: 100%;
 	text-align: center;
@@ -150,10 +136,22 @@ footer {
 	width: 100%;
 }
 
-.atkTableHeader {
+.atkTableHeader,
+.armorTableHeader {
 	background-color: #000000;
 	color: #FFFFFF;
 	text-align: center;
+}
+
+.armorTable {
+	width: 60%;
+	border-collapse: collapse;
+	border: 0;
+	text-align: center;
+}
+
+.armorEquip {
+	width: 100%;
 }
 
 .skillDiv {

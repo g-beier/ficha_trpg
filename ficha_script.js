@@ -1,8 +1,8 @@
 /* ---------------- FICHA 0.0 - JavaScript ---------------- */
 
-function d20(element) {
-	var dice = Math.ceil( 20 * Math.random() ) ;
-	return dice + parseInt(element.value) ;
+function dX(dice,element) {
+	var roll = Math.ceil( parseInt(dice) * Math.random() ) ;
+	return roll + parseInt(element.value) ;
 }
 
 /* ---------------- HABILIDADES BÁSICAS ---------------- */
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	/* ---------------- DADOS ---------------- */
 	document.querySelectorAll('.d20').forEach(function(element) {
 		element.addEventListener('click', function(spot) {
-			alert( "Rolagem deu:  " + d20(element) ) ;
+			alert( "Rolagem deu:  " + dX("20",element) ) ;
 		});
 	});
 });
