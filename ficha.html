@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 	<head>
 		<title>Tormenta RPG - Ficha Editável</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="ficha_style.css">
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="ficha_style.css" />
 		<script src="ficha_script.js"></script>
 	</head>
 	<!--
@@ -24,8 +24,9 @@
 				Nome do Personagem, Idade, Divindade, Tendência
 				Classe, Nível
 			Raça, Tamanho -->
-			<label for="charName">Nome do Personagem:</label><input size="20" maxlength="30" id="charName">
-			<label for="charRace">Raça:</label><input size="10" maxlength="15" id="charRace">
+			<h2>Identificação</h2>
+			<label for="charName">Nome do Personagem:</label><input size="20" maxlength="30" id="charName" />
+			<label for="charRace">Raça:</label><input size="10" maxlength="15" id="charRace" />
 			<label for="charSize">Tamanho</label><select id="charSize">
 				<option value="8">Diminuto</option>
 				<option value="4">Ínfimo</option>
@@ -48,74 +49,100 @@
 				<option value="CN">CN - Caótico e Neutro</option>
 				<option value="CM">CM - Caótico e Maligno</option>
 			</select>
-			<label for="charDeity">Divindade:</label><input size="15" maxlength="20" id="charDeity">
-			<label for="charAge">Idade:</label><input type="number" id="charAge" min="0" max="999">
-			<label for="charClass">Classe:</label><input size="40" maxlength="60" id="charClass">
-			<label for="charLevel">Nível:</label><input type="number" step="1" id="charLevel" value="1">
+			<label for="charDeity">Divindade:</label><input size="15" maxlength="20" id="charDeity" />
+			<label for="charAge">Idade:</label><input type="number" id="charAge" min="0" max="999" />
+			<label for="charClass">Classe:</label><input size="40" maxlength="60" id="charClass" />
+			<label for="charLevel">Nível:</label><input type="number" step="1" id="charLevel" value="1" />
 			<label for="charDesloc">Deslocamento:</label><input id="charDesloc">
-			<label for="charPlayer">Nome do Jogador:</label><input size="15" maxlength="15" id="charPlayer">
+			<label for="charPlayer">Nome do Jogador:</label><input size="15" maxlength="15" id="charPlayer" />
 			</section>
 			
 			<section class="habSection" id="hab"> <!-- HABILIDADES BÁSICAS -->
+				<h2>Habilidades Básicas</h2>
 				<div class="hab">
 					<div class="habTitle">
 						<span class="habAbbr">For</span> <br />
 						<span class="habName">Força</span>
 					</div>
-					<label for="FOR">Valor</label><input type="number" step="1" min="0" id="FOR" class="habValor" value="10">
-					<label for="FORtemp">Temp</label><input type="number" step="1" id="FORtemp" class="habTemp" placeholder="0">
-					<label for="FORmod">Mod</label><input type="number" id="FORmod" class="habMod d20" value="0" readonly>
+					<div class="habDiv">
+						<label for="FOR" class="habLabel">Valor</label><br /><input type="number" step="1" min="0" id="FOR" class="habValor" value="10" />
+					</div>
+					<div class="habDiv">
+						<label for="FORtemp" class="habLabel">Temp</label><br /><input type="number" step="1" id="FORtemp" class="habTemp" placeholder="0" />
+					</div>
+					<label for="FORmod" class="habLabel">Mod</label><br /><input type="number" id="FORmod" class="habMod d20" value="0" readonly />
 				</div>
 				<div class="hab">
 					<div class="habTitle">
 						<span class="habAbbr">Des</span> <br />
 						<span class="habName">Destreza</span>
 					</div>
-					<label for="DES">Valor</label><input type="number" step="1" min="0" id="DES" class="habValor" value="10">
-					<label for="DEStemp">Temp</label><input type="number" step="1" id="DEStemp" class="habTemp" placeholder="0">
-					<label for="DESmod">Mod</label><input type="number" id="DESmod" class="habMod d20" value="0" readonly>
+					<div class="habDiv">
+						<label for="DES" class="habLabel">Valor</label><br /><input type="number" step="1" min="0" id="DES" class="habValor" value="10" />
+					</div>
+					<div class="habDiv">
+						<label for="DEStemp" class="habLabel">Temp</label><br /><input type="number" step="1" id="DEStemp" class="habTemp" placeholder="0" />
+					</div>
+					<label for="DESmod" class="habLabel">Mod</label><br /><input type="number" id="DESmod" class="habMod d20" value="0" readonly />
 				</div>
 				<div class="hab">
 					<div class="habTitle">
 						<span class="habAbbr">Con</span> <br />
 						<span class="habName">Constituição</span>
 					</div>
-					<label for="CON">Valor</label><input type="number" step="1" min="0" id="CON" class="habValor" value="10">
-					<label for="CONtemp">Temp</label><input type="number" step="1" id="CONtemp" class="habTemp" placeholder="0">
-					<label for="CONmod">Mod</label><input type="number" id="CONmod" class="habMod d20" value="0" readonly>
+					<div class="habDiv">
+						<label for="CON" class="habLabel">Valor</label><br /><input type="number" step="1" min="0" id="CON" class="habValor" value="10" />
+					</div>
+					<div class="habDiv">
+						<label for="CONtemp" class="habLabel">Temp</label><br /><input type="number" step="1" id="CONtemp" class="habTemp" placeholder="0" />
+					</div>
+					<label for="CONmod" class="habLabel">Mod</label><br /><input type="number" id="CONmod" class="habMod d20" value="0" readonly />
 				</div>
 				<div class="hab">
 					<div class="habTitle">
 						<span class="habAbbr">Int</span> <br />
 						<span class="habName">Inteligência</span>
 					</div>
-					<label for="INT">Valor</label><input type="number" step="1" min="0" id="INT" class="habValor" value="10">
-					<label for="INTtemp">Temp</label><input type="number" step="1" id="INTtemp" class="habTemp" placeholder="0">
-					<label for="INTmod">Mod</label><input type="number" id="INTmod" class="habMod d20" value="0" readonly>
+					<div class="habDiv">
+						<label for="INT" class="habLabel">Valor</label><br /><input type="number" step="1" min="0" id="INT" class="habValor" value="10" />
+					</div>
+					<div class="habDiv">
+						<label for="INTtemp" class="habLabel">Temp</label><br /><input type="number" step="1" id="INTtemp" class="habTemp" placeholder="0" />
+					</div>
+					<label for="INTmod" class="habLabel">Mod</label><br /><input type="number" id="INTmod" class="habMod d20" value="0" readonly />
 				</div>
 				<div class="hab">
 					<div class="habTitle">
 						<span class="habAbbr">Sab</span> <br />
 						<span class="habName">Sabedoria</span>
 					</div>
-					<label for="SAB">Valor</label><input type="number" step="1" min="0" id="SAB" class="habValor" value="10">
-					<label for="SABtemp">Temp</label><input type="number" step="1" id="SABtemp" class="habTemp" placeholder="0">
-					<label for="SABmod">Mod</label><input type="number" id="SABmod" class="habMod d20" value="0" readonly>
+					<div class="habDiv">
+						<label for="SAB" class="habLabel">Valor</label><br /><input type="number" step="1" min="0" id="SAB" class="habValor" value="10" />
+					</div>
+					<div class="habDiv">
+						<label for="SABtemp" class="habLabel">Temp</label><br /><input type="number" step="1" id="SABtemp" class="habTemp" placeholder="0" />
+					</div>
+					<label for="SABmod" class="habLabel">Mod</label><br /><input type="number" id="SABmod" class="habMod d20" value="0" readonly />
 				</div>
 				<div class="hab">
 					<div class="habTitle">
 						<span class="habAbbr">Car</span> <br />
 						<span class="habName">Carisma</span>
 					</div>
-					<label for="CAR">Valor</label><input type="number" step="1" min="0" id="CAR" class="habValor" value="10">
-					<label for="CARtemp">Temp</label><input type="number" step="1" id="CARtemp" class="habTemp" placeholder="0">
-					<label for="CARmod">Mod</label><input type="number" id="CARmod" class="habMod d20" value="0" readonly>
+					<div class="habDiv">
+						<label for="CAR" class="habLabel">Valor</label><br /><input type="number" step="1" min="0" id="CAR" class="habValor" value="10" />
+					</div>
+					<div class="habDiv">
+						<label for="CARtemp" class="habLabel">Temp</label><br /><input type="number" step="1" id="CARtemp" class="habTemp" placeholder="0" />
+					</div>
+					<label for="CARmod" class="habLabel">Mod</label><br /><input type="number" id="CARmod" class="habMod d20" value="0" readonly />
 				</div>
 			</section>
 			
 			<section class="statsSection" id="stats"> <!-- DADOS DO PERSONAGEM:
 				CA, PV, BA
 			PM, PE, Resistências-->
+			<h2>Estatísticas</h2>
 			Dados do Personagem, como Classe de Armadura, Pontos de Vida, Pontos de Magia e Pontos de Energia, Resistências, Bônus de Ataque.
 			<table id="statsSav" class="statsTable">
 				<tr>
@@ -125,18 +152,18 @@
 				</tr>
 				<tr>
 					<td class="statsTableHeader"><span class="statsAbbr">Fort</span><br /><span class="statsSav" id="statsFort">Fortitude</span></td>
-					<td><input type="number" class="statsSavTotal d20" id="statsFortTotal" value="0" readonly></td>
-					<td><input type="number" class="statsSavBonus" id="statsFortBonus"></td>
+					<td><input type="number" class="statsSavTotal d20" id="statsFortTotal" value="0" readonly /></td>
+					<td><input type="number" class="statsSavBonus" id="statsFortBonus" /></td>
 				</tr>
 				<tr>
 					<td class="statsTableHeader"><span class="statsAbbr">Ref</span><br /><span class="statsSav" id="statsRef">Reflexos</span></td>
-					<td><input type="number" class="statsSavTotal d20" id="statsRefTotal" value="0" readonly></td>
-					<td><input type="number" class="statsSavBonus" id="statsRefBonus"></td>
+					<td><input type="number" class="statsSavTotal d20" id="statsRefTotal" value="0" readonly /></td>
+					<td><input type="number" class="statsSavBonus" id="statsRefBonus" /></td>
 				</tr>
 				<tr>
 					<td class="statsTableHeader"><span class="statsAbbr">Vont</span><br /><span class="statsSav" id="statsVont">Vontade</span></td>
-					<td><input type="number" class="statsSavTotal d20" id="statsVontTotal" value="0" readonly></td>
-					<td><input type="number" class="statsSavBonus" id="statsVontBonus"></td>
+					<td><input type="number" class="statsSavTotal d20" id="statsVontTotal" value="0" readonly /></td>
+					<td><input type="number" class="statsSavBonus" id="statsVontBonus" /></td>
 				</tr>
 			</table>
 			</section>
@@ -154,39 +181,39 @@
 					</tr>
 					<tr>
 						<td>bt</td>
-						<td><input type="text" size="20" maxlength="40" class="atkWeapon" id="atkWeapon1"></td>
-						<td><input type="number" step="1" class="atkBonus" id="atkBonus1"></td>
-						<td><input type="text" size="10" maxlength="15" class="atkDamage" id="atkDamage1"></td>
-						<td><input type="text" size="6" maxlength="10" class="atkCrit" id="atkCrit1"></td>
-						<td><input type="text" size="4" maxlength="10" class="atkRange" id="atkRange1"></td>
-						<td><input type="text" size="10" maxlength="15" class="atkType" id="atkType1"></td>
+						<td><input type="text" size="20" maxlength="40" class="atkWeapon" id="atkWeapon1" /></td>
+						<td><input type="number" step="1" class="atkBonus" id="atkBonus1" /></td>
+						<td><input type="text" size="10" maxlength="15" class="atkDamage" id="atkDamage1" /></td>
+						<td><input type="text" size="6" maxlength="10" class="atkCrit" id="atkCrit1" /></td>
+						<td><input type="text" size="4" maxlength="10" class="atkRange" id="atkRange1" /></td>
+						<td><input type="text" size="10" maxlength="15" class="atkType" id="atkType1" /></td>
 					</tr>
 					<tr>
 						<td>bt</td>
-						<td><input type="text" size="20" maxlength="40" class="atkWeapon" id="atkWeapon2"></td>
-						<td><input type="number" step="1" class="atkBonus" id="atkBonus2"></td>
-						<td><input type="text" size="10" maxlength="15" class="atkDamage" id="atkDamage2"></td>
-						<td><input type="text" size="6" maxlength="10" class="atkCrit" id="atkCrit2"></td>
-						<td><input type="text" size="4" maxlength="10" class="atkRange" id="atkRange2"></td>
-						<td><input type="text" size="10" maxlength="15" class="atkType" id="atkType2"></td>
+						<td><input type="text" size="20" maxlength="40" class="atkWeapon" id="atkWeapon2" /></td>
+						<td><input type="number" step="1" class="atkBonus" id="atkBonus2" /></td>
+						<td><input type="text" size="10" maxlength="15" class="atkDamage" id="atkDamage2" /></td>
+						<td><input type="text" size="6" maxlength="10" class="atkCrit" id="atkCrit2" /></td>
+						<td><input type="text" size="4" maxlength="10" class="atkRange" id="atkRange2" /></td>
+						<td><input type="text" size="10" maxlength="15" class="atkType" id="atkType2" /></td>
 					</tr>
 					<tr>
 						<td>bt</td>
-						<td><input type="text" size="20" maxlength="40" class="atkWeapon" id="atkWeapon3"></td>
-						<td><input type="number" step="1" class="atkBonus" id="atkBonus3"></td>
-						<td><input type="text" size="10" maxlength="15" class="atkDamage" id="atkDamage3"></td>
-						<td><input type="text" size="6" maxlength="10" class="atkCrit" id="atkCrit3"></td>
-						<td><input type="text" size="4" maxlength="10" class="atkRange" id="atkRange3"></td>
-						<td><input type="text" size="10" maxlength="15" class="atkType" id="atkType3"></td>
+						<td><input type="text" size="20" maxlength="40" class="atkWeapon" id="atkWeapon3" /></td>
+						<td><input type="number" step="1" class="atkBonus" id="atkBonus3" /></td>
+						<td><input type="text" size="10" maxlength="15" class="atkDamage" id="atkDamage3" /></td>
+						<td><input type="text" size="6" maxlength="10" class="atkCrit" id="atkCrit3" /></td>
+						<td><input type="text" size="4" maxlength="10" class="atkRange" id="atkRange3" /></td>
+						<td><input type="text" size="10" maxlength="15" class="atkType" id="atkType3" /></td>
 					</tr>
 					<tr>
 						<td>bt</td>
-						<td><input type="text" size="20" maxlength="40" class="atkWeapon" id="atkWeapon4"></td>
-						<td><input type="number" step="1" class="atkBonus" id="atkBonus4"></td>
-						<td><input type="text" size="10" maxlength="15" class="atkDamage" id="atkDamage4"></td>
-						<td><input type="text" size="6" maxlength="10" class="atkCrit" id="atkCrit4"></td>
-						<td><input type="text" size="4" maxlength="10" class="atkRange" id="atkRange4"></td>
-						<td><input type="text" size="10" maxlength="15" class="atkType" id="atkType4"></td>
+						<td><input type="text" size="20" maxlength="40" class="atkWeapon" id="atkWeapon4" /></td>
+						<td><input type="number" step="1" class="atkBonus" id="atkBonus4" /></td>
+						<td><input type="text" size="10" maxlength="15" class="atkDamage" id="atkDamage4" /></td>
+						<td><input type="text" size="6" maxlength="10" class="atkCrit" id="atkCrit4" /></td>
+						<td><input type="text" size="4" maxlength="10" class="atkRange" id="atkRange4" /></td>
+						<td><input type="text" size="10" maxlength="15" class="atkType" id="atkType4" /></td>
 					</tr>
 				</table>
 			</section>
@@ -201,28 +228,28 @@
 						<td class="armorTableHeader">Penalidade<br />de Armadura</td>
 					</tr>
 					<tr>
-						<td><input type="text" class="armorEquip" id="armorEquip1" maxlength="20" placeholder="Armadura"></td>
-						<td><input type="number" class="armorBonus" id="armorBonus1" step="1"></td>
-						<td><input type="number" class="armorDex" id="armorDex1" step="1"></td>
-						<td><input type="number" class="armorPen" id="armorPen1" step="1"></td>
+						<td><input type="text" class="armorEquip" id="armorEquip1" maxlength="20" placeholder="Armadura" /></td>
+						<td><input type="number" class="armorBonus" id="armorBonus1" step="1" /></td>
+						<td><input type="number" class="armorDex" id="armorDex1" step="1" /></td>
+						<td><input type="number" class="armorPen" id="armorPen1" step="1" /></td>
 					</tr>
 					<tr>
-						<td><input type="text" class="armorEquip" id="armorEquip2" maxlength="20" placeholder="Escudo"></td>
-						<td><input type="number" class="armorBonus" id="armorBonus2" step="1"></td>
-						<td><input type="number" class="armorDex" id="armorDex2" step="1"></td>
-						<td><input type="number" class="armorPen" id="armorPen2" step="1"></td>
+						<td><input type="text" class="armorEquip" id="armorEquip2" maxlength="20" placeholder="Escudo" /></td>
+						<td><input type="number" class="armorBonus" id="armorBonus2" step="1" /></td>
+						<td><input type="number" class="armorDex" id="armorDex2" step="1" /></td>
+						<td><input type="number" class="armorPen" id="armorPen2" step="1" /></td>
 					</tr>
 					<tr>
-						<td><input type="text" class="armorEquip" id="armorEquip3" maxlength="20" placeholder="Outro"></td>
-						<td><input type="number" class="armorBonus" id="armorBonus3" step="1"></td>
-						<td><input type="number" class="armorDex" id="armorDex3" step="1"></td>
-						<td><input type="number" class="armorPen" id="armorPen3" step="1"></td>
+						<td><input type="text" class="armorEquip" id="armorEquip3" maxlength="20" placeholder="Outro" /></td>
+						<td><input type="number" class="armorBonus" id="armorBonus3" step="1" /></td>
+						<td><input type="number" class="armorDex" id="armorDex3" step="1" /></td>
+						<td><input type="number" class="armorPen" id="armorPen3" step="1" /></td>
 					</tr>
 					<tr>
-						<td><input type="text" class="armorEquip" id="armorEquip4" maxlength="20" placeholder="Outro"></td>
-						<td><input type="number" class="armorBonus" id="armorBonus4" step="1"></td>
-						<td><input type="number" class="armorDex" id="armorDex4" step="1"></td>
-						<td><input type="number" class="armorPen" id="armorPen4" step="1"></td>
+						<td><input type="text" class="armorEquip" id="armorEquip4" maxlength="20" placeholder="Outro" /></td>
+						<td><input type="number" class="armorBonus" id="armorBonus4" step="1" /></td>
+						<td><input type="number" class="armorDex" id="armorDex4" step="1" /></td>
+						<td><input type="number" class="armorPen" id="armorPen4" step="1" /></td>
 					</tr>
 				</table>
 			</section>
@@ -239,7 +266,7 @@
 				<div class="skillDiv">
 					<h2>Habilidades de Raça</h2>
 					<textarea rows="4" cols="25" class="skillTextarea" placeholder="Digite as habilidades de classe do seu personagem aqui."></textarea>
-					</div>
+				</div>
 			</section>
 		</div>
 		
@@ -255,8 +282,8 @@
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perAcroTreino"></td>
-						<td class="perTableName"><span class="per" id="perAcro">Acrobacia</span></td>
-						<td><input type="number" id="perAcroTotal" class="d20" value="0" readonly></td>
+						<td class="perTableName"><span class="per perArmor" id="perAcro">Acrobacia</span></td>
+						<td><input type="number" id="perAcroTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perAcroHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod" selected>DES</option>
@@ -265,12 +292,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perAcroBonus"></td>
+						<td><input type="number" id="perAcroBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perAdesTreino"></td>
 						<td class="perTableName"><span class="per" id="perAdes">Adestrar Animais</span></td>
-						<td><input type="number" id="perAdesTotal" class="d20" value="0" readonly></td>
+						<td><input type="number" id="perAdesTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perAdesHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -279,12 +306,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod" selected>CAR</option>
 						</select></td>
-						<td><input type="number" id="perAdesBonus"></td>
+						<td><input type="number" id="perAdesBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perAtleTreino"></td>
-						<td class="perTableName"><span class="per" id="perAtle">Atletismo</span></td>
-						<td><input type="number" id="perAtleTotal" class="d20" value="0" readonly></td>
+						<td class="perTableName"><span class="per perArmor" id="perAtle">Atletismo</span></td>
+						<td><input type="number" id="perAtleTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perAtleHab">
 							<option value="FORmod" selected>FOR</option>
 							<option value="DESmod">DES</option>
@@ -293,12 +320,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perAtleBonus"></td>
+						<td><input type="number" id="perAtleBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perAtu1Treino"></td>
-						<td class="perTableName"><span class="per" id="perAtu1">Atuação (<input id="perAtu1Spec" class="perSpec">)</span></td>
-						<td><input type="number" id="perAtu1Total" class="d20" value="0" readonly></td>
+						<td class="perTableName"><span class="per" id="perAtu1">Atuação (<input id="perAtu1Spec" class="perSpec" />)</span></td>
+						<td><input type="number" id="perAtu1Total" class="d20" value="0" readonly /></td>
 						<td><select id="perAtu1Hab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -307,12 +334,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod" selected>CAR</option>
 						</select></td>
-						<td><input type="number" id="perAtu1Bonus"></td>
+						<td><input type="number" id="perAtu1Bonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perAtu2Treino"></td>
-						<td class="perTableName"><span class="per" id="perAtu2">Atuação (<input id="perAtu2Spec" class="perSpec">)</span></td>
-						<td><input type="number" id="perAtu2Total" class="d20" value="0" readonly></td>
+						<td class="perTableName"><span class="per" id="perAtu2">Atuação (<input id="perAtu2Spec" class="perSpec" />)</span></td>
+						<td><input type="number" id="perAtu2Total" class="d20" value="0" readonly /></td>
 						<td><select id="perAtu2Hab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -321,12 +348,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod" selected>CAR</option>
 						</select></td>
-						<td><input type="number" id="perAtu2Bonus"></td>
+						<td><input type="number" id="perAtu2Bonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perAtu3Treino"></td>
-						<td class="perTableName"><span class="per" id="perAtu3">Atuação (<input id="perAtu3Spec" class="perSpec">)</span></td>
-						<td><input type="number" id="perAtu3Total" class="d20" value="0" readonly></td>
+						<td class="perTableName"><span class="per" id="perAtu3">Atuação (<input id="perAtu3Spec" class="perSpec" />)</span></td>
+						<td><input type="number" id="perAtu3Total" class="d20" value="0" readonly /></td>
 						<td><select id="perAtu3Hab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -335,12 +362,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod" selected>CAR</option>
 						</select></td>
-						<td><input type="number" id="perAtu3Bonus"></td>
+						<td><input type="number" id="perAtu3Bonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perCavaTreino"></td>
 						<td class="perTableName"><span class="per" id="perCava">Cavalgar</span></td>
-						<td><input type="number" id="perCavaTotal" class="d20" value="0" readonly></td>
+						<td><input type="number" id="perCavaTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perCavaHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod" selected>DES</option>
@@ -349,12 +376,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perCavaBonus"></td>
+						<td><input type="number" id="perCavaBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perCon1Treino"></td>
-						<td class="perTableName"><span class="per" id="perCon1">Conhecimento (<input id="perCon1Spec" class="perSpec">)</span></td>
-						<td><input type="number" id="perCon1Total" class="d20" value="0" readonly></td>
+						<td class="perTableName"><span class="per" id="perCon1">Conhecimento (<input id="perCon1Spec" class="perSpec" />)</span></td>
+						<td><input type="number" id="perCon1Total" class="d20" value="0" readonly /></td>
 						<td><select id="perCon1Hab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -363,12 +390,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perCon1Bonus"></td>
+						<td><input type="number" id="perCon1Bonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perCon2Treino"></td>
-						<td class="perTableName"><span class="per" id="perCon2">Conhecimento (<input id="perCon2Spec" class="perSpec">)</span></td>
-						<td><input type="number" id="perCon2Total" class="d20" value="0" readonly></td>
+						<td class="perTableName"><span class="per" id="perCon2">Conhecimento (<input id="perCon2Spec" class="perSpec" />)</span></td>
+						<td><input type="number" id="perCon2Total" class="d20" value="0" readonly /></td>
 						<td><select id="perCon2Hab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -377,12 +404,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perCon2Bonus"></td>
+						<td><input type="number" id="perCon2Bonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perCon3Treino"></td>
-						<td class="perTableName"><span class="per" id="perCon3">Conhecimento (<input id="perCon3Spec" class="perSpec">)</span></td>
-						<td><input type="number" id="perCon3Total" class="d20" value="0" readonly></td>
+						<td class="perTableName"><span class="per" id="perCon3">Conhecimento (<input id="perCon3Spec" class="perSpec" />)</span></td>
+						<td><input type="number" id="perCon3Total" class="d20" value="0" readonly /></td>
 						<td><select id="perCon3Hab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -391,12 +418,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perCon3Bonus"></td>
+						<td><input type="number" id="perCon3Bonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perCuraTreino"></td>
 						<td class="perTableName"><span class="per" id="perCura">Cura</span></td>
-						<td><input type="number" id="perCuraTotal" class="d20" value="0" readonly></td>
+						<td><input type="number" id="perCuraTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perCuraHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -405,12 +432,12 @@
 							<option value="SABmod" selected>SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perCuraBonus"></td>
+						<td><input type="number" id="perCuraBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perDiplTreino"></td>
 						<td class="perTableName"><span class="per" id="perDipl">Diplomacia</span></td>
-						<td><input type="number" id="perDiplTotal" class="d20" value="0" readonly></td>
+						<td><input type="number" id="perDiplTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perDiplHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -419,12 +446,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod" selected>CAR</option>
 						</select></td>
-						<td><input type="number" id="perDiplBonus"></td>
+						<td><input type="number" id="perDiplBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perEngaTreino"></td>
 						<td class="perTableName"><span class="per" id="perEnga">Enganação</span></td>
-						<td><input type="number" id="perEngaTotal" class="d20" value="0" readonly></td>
+						<td><input type="number" id="perEngaTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perEngaHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -433,12 +460,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod" selected>CAR</option>
 						</select></td>
-						<td><input type="number" id="perEngaBonus"></td>
+						<td><input type="number" id="perEngaBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perFurtTreino"></td>
-						<td class="perTableName"><span class="per" id="perFurt">Furtividade</span></td>
-						<td><input type="number" id="perFurtTotal" class="d20" value="0" readonly></td>
+						<td class="perTableName"><span class="per perArmor perSize" id="perFurt">Furtividade</span></td>
+						<td><input type="number" id="perFurtTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perFurtHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod" selected>DES</option>
@@ -447,12 +474,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perFurtBonus"></td>
+						<td><input type="number" id="perFurtBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perIdmgTreino"></td>
 						<td class="perTableName"><span class="per" id="perIdmg">Identificar Magia</span></td>
-						<td><input type="number" id="perIdmgTotal" class="d20" value="0" readonly></td>
+						<td><input type="number" id="perIdmgTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perIdmgHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -461,12 +488,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perIdmgBonus"></td>
+						<td><input type="number" id="perIdmgBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perInicTreino"></td>
 						<td class="perTableName"><span class="per" id="perInic">Iniciativa</span></td>
-						<td><input type="number" id="perInicTotal" class="d20" value="0" readonly></td>
+						<td><input type="number" id="perInicTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perInicHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod" selected>DES</option>
@@ -475,12 +502,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perInicBonus"></td>
+						<td><input type="number" id="perInicBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perIntiTreino"></td>
 						<td class="perTableName"><span class="per" id="perInti">Intimidação</span></td>
-						<td><input type="number" id="perIntiTotal" class="d20" value="0" readonly></td>
+						<td><input type="number" id="perIntiTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perIntiHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -489,12 +516,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod" selected>CAR</option>
 						</select></td>
-						<td><input type="number" id="perIntiBonus"></td>
+						<td><input type="number" id="perIntiBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perIntuTreino"></td>
 						<td class="perTableName"><span class="per" id="perIntu">Intuição</span></td>
-						<td><input type="number" id="perIntuTotal" class="d20" value="0" readonly></td>
+						<td><input type="number" id="perIntuTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perIntuHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -503,12 +530,12 @@
 							<option value="SABmod" selected>SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perIntuBonus"></td>
+						<td><input type="number" id="perIntuBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perJogaTreino"></td>
 						<td class="perTableName"><span class="per" id="perJoga">Jogatina</span></td>
-						<td><input type="number" id="perJogaTotal" class="d20" value="0" readonly></td>
+						<td><input type="number" id="perJogaTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perJogaHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -517,12 +544,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod" selected>CAR</option>
 						</select></td>
-						<td><input type="number" id="perJogaBonus"></td>
+						<td><input type="number" id="perJogaBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perLadiTreino"></td>
-						<td class="perTableName"><span class="per" id="perLadi">Ladinagem</span></td>
-						<td><input type="number" id="perLadiTotal" class="d20" value="0" readonly></td>
+						<td class="perTableName"><span class="per perArmor" id="perLadi">Ladinagem</span></td>
+						<td><input type="number" id="perLadiTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perLadiHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod" selected>DES</option>
@@ -531,12 +558,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perLadiBonus"></td>
+						<td><input type="number" id="perLadiBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perMediTreino"></td>
 						<td class="perTableName"><span class="per" id="perMedi">Meditação</span></td>
-						<td><input type="number" id="perMediTotal" class="d20" value="0" readonly></td>
+						<td><input type="number" id="perMediTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perMediHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -545,12 +572,12 @@
 							<option value="SABmod" selected>SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perMediBonus"></td>
+						<td><input type="number" id="perMediBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perInfoTreino"></td>
 						<td class="perTableName"><span class="per" id="perInfo">Obter Informação</span></td>
-						<td><input type="number" id="perInfoTotal" class="d20" value="0" readonly></td>
+						<td><input type="number" id="perInfoTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perInfoHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -559,12 +586,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod" selected>CAR</option>
 						</select></td>
-						<td><input type="number" id="perInfoBonus"></td>
+						<td><input type="number" id="perInfoBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perOfi1Treino"></td>
-						<td class="perTableName"><span class="per" id="perOfi1">Ofício (<input id="perOfi1Spec" class="perSpec">)</span></td>
-						<td><input type="number" id="perOfi1Total" class="d20" value="0" readonly></td>
+						<td class="perTableName"><span class="per" id="perOfi1">Ofício (<input id="perOfi1Spec" class="perSpec" />)</span></td>
+						<td><input type="number" id="perOfi1Total" class="d20" value="0" readonly /></td>
 						<td><select id="perOfi1Hab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -573,12 +600,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perOfi1Bonus"></td>
+						<td><input type="number" id="perOfi1Bonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perOfi2Treino"></td>
-						<td class="perTableName"><span class="per" id="perOfi2">Ofício (<input id="perOfi2Spec" class="perSpec">)</span></td>
-						<td><input type="number" id="perOfi2Total" class="d20" value="0" readonly></td>
+						<td class="perTableName"><span class="per" id="perOfi2">Ofício (<input id="perOfi2Spec" class="perSpec" />)</span></td>
+						<td><input type="number" id="perOfi2Total" class="d20" value="0" readonly /></td>
 						<td><select id="perOfi2Hab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -587,12 +614,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perOfi2Bonus"></td>
+						<td><input type="number" id="perOfi2Bonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perOfi3Treino"></td>
-						<td class="perTableName"><span class="per" id="perOfi3">Ofício (<input id="perOfi3Spec" class="perSpec">)</span></td>
-						<td><input type="number" id="perOfi3Total" class="d20" value="0" readonly></td>
+						<td class="perTableName"><span class="per" id="perOfi3">Ofício (<input id="perOfi3Spec" class="perSpec" />)</span></td>
+						<td><input type="number" id="perOfi3Total" class="d20" value="0" readonly /></td>
 						<td><select id="perOfi3Hab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -601,12 +628,12 @@
 							<option value="SABmod">SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perOfi3Bonus"></td>
+						<td><input type="number" id="perOfi3Bonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perPercTreino"></td>
 						<td class="perTableName"><span class="per" id="perPerc">Percepção</span></td>
-						<td><input type="number" id="perPercTotal" class="d20" value="0" readonly></td>
+						<td><input type="number" id="perPercTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perPercHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -615,12 +642,12 @@
 							<option value="SABmod" selected>SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perPercBonus"></td>
+						<td><input type="number" id="perPercBonus" /></td>
 					</tr>
 					<tr>
 						<td><input type="checkbox" id="perSobrTreino"></td>
 						<td class="perTableName"><span class="per" id="perSobr">Sobrevivência</span></td>
-						<td><input type="number" id="perSobrTotal" class="d20" value="0" readonly></td>
+						<td><input type="number" id="perSobrTotal" class="d20" value="0" readonly /></td>
 						<td><select id="perSobrHab">
 							<option value="FORmod">FOR</option>
 							<option value="DESmod">DES</option>
@@ -629,7 +656,7 @@
 							<option value="SABmod" selected>SAB</option>
 							<option value="CARmod">CAR</option>
 						</select></td>
-						<td><input type="number" id="perSobrBonus"></td>
+						<td><input type="number" id="perSobrBonus" /></td>
 					</tr>
 				</table>
 			</section>
@@ -664,4 +691,4 @@
 		</footer>
 		
 	</body>
-</html>		
+</html>			
